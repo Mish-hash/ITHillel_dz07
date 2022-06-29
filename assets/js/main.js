@@ -15,3 +15,16 @@ frameworks.forEach((elem, index, array)=>{
     elem === 'jQuery' ? console.log(array.splice(index, 1) + ' -- Это здесь лишнее') : null;
 });
 
+
+/*
+2) Создайте функцию removeNegativeElements, которая удаляет из входящего массива все негативные числа.
+
+let result = removeNegativeElements([-9, 2, 3, 0, -28, 'value']); // [2, 3, 0, 'value'];
+let result = removeNegativeElements([-9, -21, -12]; // []
+let result = removeNegativeElements(['-102', 102]); // ['-102', 102]
+*/
+
+function removeNegativeElements(array) {
+    return array.filter(elem => typeof elem !== 'number' || elem >= 0);
+}
+
