@@ -53,3 +53,19 @@ function sumRecursive(array, sum = 0, index = 0){
     return (array[index] !== undefined) ? sumRecursive(array, sum += array[index], ++index) : sum;
 }
 
+
+/*
+5) Дан массив const arr = [0, 2, 4, 5, 7, 10, 2, 3 5, 6, 10, 3]
+напишите функцию, рикурсивно сумирующую все элементы = 10
+*/
+
+const arr2 = [0, 2, 4, 5, 7, 10, 2, 3, 5, 6, 10, 3];
+
+function sum10Recursive(array, sum = 0, index = 0){
+    if (array[index] === undefined) {
+        return sum;
+    }
+    (array[index] === 10) ? sum += array[index] : sum;
+    return sum10Recursive(array, sum, ++index)
+}
+
