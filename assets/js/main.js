@@ -69,3 +69,16 @@ function sum10Recursive(array, sum = 0, index = 0){
     return sum10Recursive(array, sum, ++index)
 }
 
+
+/*
+6) Дан массив const arr = [0, 2, 4, 5, 7, 10, 2, 3 5, 6, 10, 3]
+напишите функцию, которая рекурсивно ищет все элементы > 5 и возвращает их ввиде массива
+*/
+
+function arrElementsOver5(array, newArray = [], index = 0) {
+    if (array[index] === undefined) {
+        return (newArray.length > 0) ? newArray : 'В исходном массиве нет элементов со значением больше 5';
+    }
+    (array[index] > 5) ? newArray.push(array[index]) : newArray;
+    return arrElementsOver5(array, newArray, ++index)
+}
