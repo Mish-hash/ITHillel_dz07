@@ -41,3 +41,15 @@ function getStringElements(array){
     return array.filter(elem => typeof elem === 'string');
 }
 
+
+/*
+4) Напищите функцияю, которая рикурсивно суммирует все элементы массива
+массв 10 элементов, заполнен случайными числами от 0 - 10, как в ДЗ ранее
+*/
+
+const startArray = [...Array(10)].map( el => Math.floor(Math.random() * 10) );
+
+function sumRecursive(array, sum = 0, index = 0){
+    return (array[index] !== undefined) ? sumRecursive(array, sum += array[index], ++index) : sum;
+}
+
