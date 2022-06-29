@@ -28,3 +28,16 @@ function removeNegativeElements(array) {
     return array.filter(elem => typeof elem !== 'number' || elem >= 0);
 }
 
+
+/*
+3) Создайте фнкцию getStringElements, которая возвращает входящий массив только со строковыми значениями.
+
+let arr = [1 , true , 42 , "red" , 64 , "green" , "web" , new Date() , -898 , false]
+let result = getStringElements(arr); // ['green', 'web']
+
+*/
+
+function getStringElements(array){
+    return array.filter(elem => typeof elem === 'string');
+}
+
